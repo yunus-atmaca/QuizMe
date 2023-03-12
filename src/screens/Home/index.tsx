@@ -5,10 +5,11 @@ import Header from './Header'
 import Category from './Category'
 import { ScaledSheet } from 'react-native-size-matters'
 import { COLORS } from '@src/res'
+import { SSPropsCreator } from '@src/types/navigation'
 
 const categories = ['Sports', 'Cinema', 'Animals', 'Geography', 'Science']
 
-const Home: FC = () => {
+const Home: FC<SSPropsCreator<'Home'>> = () => {
   const renderCategory: FlatListProps<string>['renderItem'] = ({
     item,
     index,

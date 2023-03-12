@@ -1,8 +1,9 @@
 import React, { FC } from 'react'
-import { View, Image, Text } from 'react-native'
+import { View, Image, Text, TouchableOpacity } from 'react-native'
 import { moderateScale, ScaledSheet } from 'react-native-size-matters'
 
 import { COLORS, STYLES } from '@src/res'
+import { getNavContainerRef } from '@src/types/navigation'
 
 type Props = {
   isEven: boolean
@@ -13,6 +14,10 @@ const CWidth = STYLES.S_WIDTH / 2
 const CHeight = moderateScale(256)
 
 const Category: FC<Props> = ({ isEven, category }) => {
+  const onCategory = () => {
+    getNavContainerRef().navigate('Questions')
+  }
+
   return (
     <View
       style={[
@@ -28,7 +33,7 @@ const Category: FC<Props> = ({ isEven, category }) => {
               justifyContent: 'flex-end',
             },
       ]}>
-      <View style={styles.container}>
+      <TouchableOpacity onPress={onCategory} style={styles.container}>
         <Image
           source={require('../../../assets/images/sport.jpg')}
           style={styles.image}
@@ -37,7 +42,7 @@ const Category: FC<Props> = ({ isEven, category }) => {
         <View style={styles.textC}>
           <Text style={styles.text}>{category}</Text>
         </View>
-      </View>
+      </TouchableOpacity>
     </View>
   )
 }
