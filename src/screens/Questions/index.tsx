@@ -8,24 +8,22 @@ import { Timer } from '@src/components'
 
 import Question from './Question'
 import Answers from './Answers'
+import Header from './Header'
+import Label from './Label'
 
-const Questions: FC<SSPropsCreator<'Questions'>> = ({ navigation }) => {
+const Questions: FC<SSPropsCreator<'Questions'>> = ({ navigation, route }) => {
   return (
     <View style={styles.container}>
       <ScrollView
         bounces={false}
         showsHorizontalScrollIndicator={false}
         horizontal={false}>
-        <Question />
-        <Answers />
+        <Header category={route.params.category} />
+        <Label />
+        {/*<Question />
+        <Answers />*/}
       </ScrollView>
-      <Timer contentContainer={styles.timerCC} />
-      <TouchableOpacity
-        onPress={() => navigation.goBack()}
-        activeOpacity={0.7}
-        style={styles.backC}>
-        <Ic_ArrowLeft />
-      </TouchableOpacity>
+      {/*<Timer contentContainer={styles.timerCC} />*/}
     </View>
   )
 }
@@ -35,19 +33,7 @@ const styles = ScaledSheet.create({
     flex: 1,
     backgroundColor: COLORS.primary,
   },
-  backC: {
-    position: 'absolute',
-    left: '16@ms',
-    top: '16@ms',
-    width: '44@ms',
-    height: '36@ms',
-    borderColor: COLORS.primaryOn,
-    borderWidth: 1,
-    borderRadius: '8@ms',
-    backgroundColor: COLORS.lightBlue,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+
   timerCC: {
     position: 'absolute',
     top: '16@ms',

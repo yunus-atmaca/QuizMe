@@ -5,7 +5,9 @@ import { createNavigationContainerRef } from '@react-navigation/native'
 
 export type RootStack = {
   Home: undefined
-  Questions: undefined
+  Questions: {
+    category: string
+  }
 }
 
 export type AllRoutes = RootStack

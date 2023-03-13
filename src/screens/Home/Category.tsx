@@ -15,7 +15,7 @@ const CHeight = moderateScale(256)
 
 const Category: FC<Props> = ({ isEven, category }) => {
   const onCategory = () => {
-    getNavContainerRef().navigate('Questions')
+    getNavContainerRef().navigate('Questions', { category })
   }
 
   return (
