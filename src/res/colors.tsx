@@ -3,6 +3,7 @@ export const COLORS = {
   primaryOn: '#272838',
   green: '#7dfee3',
   red: '#eb9486',
+  lightBlue: '#9cd0d3',
   transparent: 'transparent',
 }
 

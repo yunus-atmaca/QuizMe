@@ -6,7 +6,7 @@ import { COLORS, STYLES } from '@src/res'
 
 type Props = {}
 
-const Question: FC = ({}) => {
+const Question: FC<Props> = ({}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.qText}>
