@@ -9,7 +9,7 @@ import { Timer } from '@src/components'
 import Question from './Question'
 import Answers from './Answers'
 import Header from './Header'
-import Label from './Label'
+import QLabel from './Label'
 
 const Questions: FC<SSPropsCreator<'Questions'>> = ({ navigation, route }) => {
   return (
@@ -19,11 +19,10 @@ const Questions: FC<SSPropsCreator<'Questions'>> = ({ navigation, route }) => {
         showsHorizontalScrollIndicator={false}
         horizontal={false}>
         <Header category={route.params.category} />
-        <Label />
-        {/*<Question />
-        <Answers />*/}
+        <QLabel />
+        <Question />
+        <Answers />
       </ScrollView>
-      {/*<Timer contentContainer={styles.timerCC} />*/}
     </View>
   )
 }
@@ -32,15 +31,6 @@ const styles = ScaledSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.primary,
-  },
-
-  timerCC: {
-    position: 'absolute',
-    top: '16@ms',
-    //backgroundColor: 'blue',
-    width: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 })
 

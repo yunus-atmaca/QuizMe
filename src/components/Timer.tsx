@@ -51,9 +51,12 @@ const styles = ScaledSheet.create({
     paddingVertical: '8@ms',
     backgroundColor: COLORS.lightBlue,
     height: '36@ms',
+    width: '72@ms',
     borderRadius: '8@ms',
     borderWidth: 1,
     borderColor: COLORS.primaryOn,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   text: {
     fontSize: 16,

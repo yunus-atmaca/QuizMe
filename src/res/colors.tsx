@@ -5,6 +5,8 @@ export const COLORS = {
   red: '#eb9486',
   lightBlue: '#9cd0d3',
   transparent: 'transparent',
+  black: 'black',
+  white: 'white',
 }
 
 //'#f9f8f5'

@@ -19,7 +19,7 @@ const Question: FC<Props> = ({}) => {
 const styles = ScaledSheet.create({
   container: {
     width: '100%',
-    height: STYLES.W_HEIGHT / 2,
+    height: STYLES.W_HEIGHT * 0.3,
     backgroundColor: 'red',
     alignItems: 'center',
     justifyContent: 'center',
