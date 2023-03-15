@@ -8,6 +8,7 @@ export type RootStack = {
   Questions: {
     category: string
   }
+  Profile: undefined
 }
 
 export type AllRoutes = RootStack

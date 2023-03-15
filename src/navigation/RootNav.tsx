@@ -6,7 +6,7 @@ import { getNavContainerRef, RootStack } from '@src/types/navigation'
 
 const Stack = createStackNavigator<RootStack>()
 
-import { Home, Questions } from '../screens'
+import { Home, Questions, Profile } from '../screens'
 
 const RootNav: FC = () => {
   const navigationRef = getNavContainerRef()
@@ -20,6 +20,7 @@ const RootNav: FC = () => {
         screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Questions" component={Questions} />
+        <Stack.Screen name="Profile" component={Profile} />
       </Stack.Navigator>
     </NavigationContainer>
   )
